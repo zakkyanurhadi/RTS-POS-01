@@ -1,0 +1,7 @@
+{
+  "name": "RST POS - UMKM Business Manager",
+  "description": "A comprehensive Point of Sale management application for small businesses (UMKM), featuring store management, profile settings, and an elegant iOS-inspired interface.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
