@@ -78,6 +78,7 @@ const DashboardScreen: React.FC = () => {
             filteredStores.map(store => (
               <div 
                 key={store.id}
+                onClick={() => navigate(AppRoute.POS_HOME)}
                 className="group flex items-center bg-white p-4 rounded-xl shadow-sm border border-transparent hover:border-primary/10 active:scale-[0.98] transition-all cursor-pointer"
               >
                 <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-gray-100 flex items-center justify-center">

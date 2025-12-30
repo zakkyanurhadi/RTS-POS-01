@@ -129,8 +129,12 @@ const CreateStoreScreen: React.FC = () => {
             </p>
           </label>
           <button 
+            type="button"
             disabled={!termsAccepted}
-            onClick={() => navigate(AppRoute.DASHBOARD)}
+            onClick={() => {
+              console.log("Navigating to dashboard...");
+              navigate(AppRoute.POS_HOME, { replace: true });
+            }}
             className={`w-full h-14 rounded-full font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all active:scale-[0.98] ${
               termsAccepted 
                 ? 'bg-primary text-white shadow-primary/20 hover:bg-primary/90' 

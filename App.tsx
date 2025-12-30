@@ -5,6 +5,7 @@ import LoginScreen from './screens/LoginScreen';
 import DashboardScreen from './screens/DashboardScreen';
 import CreateStoreScreen from './screens/CreateStoreScreen';
 import AccountScreen from './screens/AccountScreen';
+import PosLayout from './screens/PosLayout';
 import ProfileModal from './components/ProfileModal';
 import { AppRoute, User } from './types';
 
@@ -53,6 +54,10 @@ const App: React.FC = () => {
         <Route 
           path={AppRoute.ACCOUNT} 
           element={isAuthenticated ? <AccountScreen user={user} onLogout={handleLogout} /> : <Navigate to={AppRoute.LOGIN} />} 
+        />
+        <Route 
+          path="/pos/*" 
+          element={isAuthenticated ? <PosLayout /> : <Navigate to={AppRoute.LOGIN} />} 
         />
       </Routes>
 
